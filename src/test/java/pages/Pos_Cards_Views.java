@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utiles.Driver;
 
+import java.util.List;
+
 public class Pos_Cards_Views {
     public  Pos_Cards_Views(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -56,4 +58,25 @@ public WebElement leftArrowBox;
 
 @FindBy (xpath = "(//span[@class='oe_menu_text'])[8]")
  public  WebElement productsConfiguration;
+
+    // Locator for all PoS - the size of this array list will be match the quantity of PoS displayed on the page
+    @FindBy (xpath = "//div[@class='o_kanban_view o_kanban_dashboard o_pos_kanban o_kanban_ungrouped']//div[@class='o_kanban_record']")
+    public List<WebElement> allCards;
+
+
+    //Locator for PoS in  InProgress status
+    @FindBy (xpath = "//div[@class='o_kanban_view o_kanban_dashboard o_pos_kanban o_kanban_ungrouped']//div[@class='o_kanban_record']//div[@class='label label-success o_kanban_inline_block']")
+    public List<WebElement> allCardsInProgress;
+
+
+    //Locator for PoS in OpeningControl status
+    @FindBy (xpath= "//div[@class='o_kanban_view o_kanban_dashboard o_pos_kanban o_kanban_ungrouped']//div[@class='o_kanban_record']//div[@class='label label-info o_kanban_inline_block']")
+    public List<WebElement> allCardsOpeningControl;
+
+
+
+    //this will return first three dots only
+    @FindBy (xpath = "//a[@class='o_kanban_manage_toggle_button']")
+    public WebElement threeDotsButtonOfFirstCard;
+
 }
