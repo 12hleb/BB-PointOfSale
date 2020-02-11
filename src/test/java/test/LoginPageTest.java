@@ -20,7 +20,7 @@ public class LoginPageTest {
         String password = Config.getProperty("passwordInput");
 
 
-        Driver.getDriver().get(Config.getProperty("url"));  // open the brawser on the url page
+        Driver.getDriver().get(Config.getProperty("url"));  // open the browser on the url page
         LoginPage lg = new LoginPage();                     // create object of LoginPage Class for invoke page elements
         lg.userNameInput.sendKeys(userName);                //Web element
         lg.passwordInput.sendKeys(password);
