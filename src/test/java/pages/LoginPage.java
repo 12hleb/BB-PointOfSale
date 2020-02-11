@@ -9,7 +9,7 @@ import utiles.Driver;
 public class LoginPage {
 
     public LoginPage(){
-        PageFactory.initElements(Driver.getDriver(), this);//create conaction btwn this class and WebDriver Selenium
+        PageFactory.initElements(Driver.getDriver(), this);//create connection btwn this class and WebDriver Selenium
     }
 
     @FindBy(xpath = "//input[@id='login']")
