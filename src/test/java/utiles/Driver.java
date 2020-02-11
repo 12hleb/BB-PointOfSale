@@ -11,8 +11,8 @@ public class Driver {
     private static WebDriver driver;
 
     private Driver(){
-
     }
+
 
    public static WebDriver getDriver(){
 
@@ -30,8 +30,6 @@ public class Driver {
                 case "safari":
                     driver = new SafariDriver();
                     break;
-
-
             }
         }
         return driver;
