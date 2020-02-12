@@ -43,6 +43,11 @@ public class POS_Detail_Page {
     //Is Bar/Restuarant is Not checked That mean 4 check box options are vissable:
             //(Category Pictures, Set Start Category, Virtual KeyBoard, Large Scrollbars)
 
+    @FindBy(xpath = "//span[.='Active']")           //Top, "Active" Button
+    public WebElement activeButton;
+
+    @FindBy(xpath = "//span[.='Archive']")            //Top, "Archive" button
+    public WebElement archiveButton;
 
     @FindBy(xpath = "(//input[@type='checkbox'])[4]")     //isBar/Restuarant checkBox
     public WebElement isBarRestuarantCheckBox;
@@ -129,6 +134,8 @@ public class POS_Detail_Page {
     @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[5]")         //DefaultNomenclatureDropdown
     public WebElement underBarcodeScannerDefaultNomenclatureDropdown;
 
+
+
     //Under Barcode Scanner there is "errow" button
     @FindBy(xpath = "(//button[@class='fa fa-external-link btn btn-default o_external_button'])[4]")        //Errow button under Barcode Scanner
     public WebElement underBarcodeScannerErrowButton;
@@ -183,6 +190,109 @@ public class POS_Detail_Page {
     //Under Payment Methods there is a link button
     @FindBy(xpath = "//span[.='Payment Methods']")              //Payment Methods link
     public WebElement underPaymentMethodLink;
+
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[25]")          //Integrated Card Reader
+    public WebElement integratedCardReaderCheckBox;
+
+    //Under Integrated Card Reader there is a link "Vantif Accounts"
+    @FindBy (xpath = "//span[.='Vantiv Accounts']")
+    public WebElement vantifAccountsLink;
+
+    //Under Integrated Card Reader there is a link "Buy a card Reader"
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/div/div/div[11]/div[2]/div[2]/div[2]/div[2]/a/text()")
+    public WebElement buyACardReaderLink;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[26]")          //Cash Control CheckBox
+    public WebElement cashControlCheckBox;
+
+    //Under Cash Control CheckBox There is a dropDown:
+    @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[13]" )          //Default opening dropdown, under cash control checkbox
+    public WebElement underCashControlDropDown;
+
+    //Under Cash Control link
+    @FindBy(xpath = "//span[.='Opening/Closing Values']")         //Under Cash Control "Opening.closing Values" link
+    public WebElement underCashControlLink;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[27]")          //Prefill Cash Payments
+    public WebElement prefillCashPaymentsCheckBox;
+
+
+    //-------------------------------------------------------------------------------------------------------------
+
+    //BILLS AND RECEIPTS:
+
+    @FindBy(xpath = "//h2[.='Bills & Receipts']")       //Bills and Receipts title
+    public WebElement billsAndReceiptsTitle;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[28]")      //Header Footer checkBox
+    public WebElement headerFooterCheckBox;
+
+    //Under Header Footer, there is text box
+    @FindBy (xpath = "(//textarea[@class='o_field_text o_field_widget o_input'])[1]")
+    public WebElement underHeaderFooterTextBox1;
+
+    //Under Header Footer, there is text box
+    @FindBy (xpath = "(//textarea[@class='o_field_text o_field_widget o_input'])[2]")
+    public WebElement underHeaderFooterTextBox2;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[29]")      //Automatic Receipt Printing
+    public WebElement automaticReceiptPrintingCheckBox;
+
+    //Under Automatic Receipt There is "Skip Preview Screen"
+    @FindBy(xpath = "(//input[@type='checkbox'])[30]")
+    public WebElement underAutomaticReceiptSkipPreviewScreenCheckBox;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[32]")      //Bill Printing checkBox
+    public WebElement billPrintingCheckBox;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[33]")  //Bill splitting checkbox
+    public WebElement billSplittingCheckBox;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[34]")      // "Tips" checkbox
+    public WebElement tipsCheckBox;
+
+    //Under Tips there is a dropDown:
+    @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[14]")
+    public WebElement underTipsDropDown;
+
+    //Under Tips and next to dropdown there is a errow button
+    @FindBy(xpath = "(//button[@class='fa fa-external-link btn btn-default o_external_button'])[8]")
+    public WebElement underTipsErrowButton;
+
+
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[35]")      //Invoicing CheckBox
+    public WebElement invoicingCheckBox;
+
+    //Under Invoicing there is a dropdown "Invoice Journal"
+    @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[15]")
+    public WebElement underInvoicingDropDown;
+
+    //Under invocing and next to dropdown there is an eerow button
+    @FindBy(xpath = "(//button[@class='fa fa-external-link btn btn-default o_external_button'])[9]")
+    public WebElement underInvoicingErroButton;
+
+    //---------------------------------------------------------------------------------------------------------------
+
+   // INVENTORY
+
+    @FindBy(xpath = "//h2[.='Inventory']")              //Inventory Title
+    public WebElement inventoryTitle;
+
+    @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[16] ")       //Under Operation type Dropdown
+    public WebElement underOperationTypeDropDown;
+
+    //Under Opertation type there is an eerow button
+    @FindBy(xpath = "(//button[@class='fa fa-external-link btn btn-default o_external_button'])[10]")
+    public  WebElement underOperationTypeErrowButton;
+
+
+
+
+
+
+
 
 
 
