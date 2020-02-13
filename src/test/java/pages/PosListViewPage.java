@@ -7,18 +7,18 @@ import org.openqa.selenium.support.PageFactory;
 import utiles.Driver;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PosListViewPage {
-    public PosListViewPage()
-    {
-        PageFactory.initElements(Driver.getDriver(), this);
 
+    public PosListViewPage(){
+        PageFactory.initElements(Driver.getDriver(),this);
     }
 
     @FindBy(xpath = "//ol[@class='breadcrumb']")
     public WebElement nameOfThePage;
 
-    @FindBy(xpath = "//button[@class='btn btn-primary btn-sm o_list_button_add']")
+    @FindBy(xpath = "//button[@accesskey='c']") // IS IT RIGHT ONE BY GLEB
     public WebElement createButton;
 
     @FindBy(xpath = "//button[@class='btn btn-sm btn-default o_button_import']")
@@ -39,10 +39,10 @@ public class PosListViewPage {
     @FindBy(xpath = "//th[@class='o_list_record_selector']")
     public WebElement selectAllCheckBox;
 
-    @FindBy(xpath = "//td[@class='o_list_record_selector']")
-    public ArrayList<WebElement> listOfCheckBoxes;
+    @FindBy(xpath = "//td[@class='o_list_record_selector']") // IS IT RIGHT ONE BY GLEB
+    public List<WebElement> listOfCheckBoxes;
 
-    @FindBy(xpath = "//td[@class='o_data_cell o_required_modifier']")
-    public ArrayList<WebElement> namesOfPOS;
+    @FindBy(xpath = "//td[@class='o_data_cell o_required_modifier']") // IS IT RIGHT ONE BY GLEB
+    public List<WebElement> namesOfPOS;
 
     }

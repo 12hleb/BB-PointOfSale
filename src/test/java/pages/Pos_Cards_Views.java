@@ -25,7 +25,7 @@ public WebElement leftArrowBox;
 @FindBy(xpath ="//button[@aria-label='Next']" )
     public WebElement rightArrowBox;
 
-@FindBy(xpath = "//button[@type='button']" )
+@FindBy(xpath = "//button[@accesskey='l']" )// IS IT RIGHT ONE BY GLEB
     public WebElement listBox;
 
 
