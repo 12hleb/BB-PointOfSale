@@ -176,6 +176,78 @@ public class POS_Detail_Page {
     @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[8]")             //Under Fiscal Position, dropDown
     public WebElement underFiscalPositionDropDown;
 
+    //--------------------------------------------------------------------------------------------------------------
+
+    //PRICING
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/div/div/h2[4]")        //Pricing Title
+    public WebElement pricingTitle;
+
+    @FindBy(xpath = "//label[.='Product Prices']")          //Product Prices title
+    public WebElement productPricesTitle;
+
+    //Under Product Prices title there is checkbox:
+    @FindBy(xpath = "(//input[@class='o_radio_input'])[1]")         //Tax excluded prices checkBox
+    public WebElement taxExcludedPricesCheckBox;
+
+    //Under Product Prices title there is checkbox:
+    @FindBy(xpath = "(//input[@class='o_radio_input'])[2]")         //Tax included prices checkBox
+    public WebElement taxIncludedPricesCheckBox;
+
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[21]")              //Global Discounts checkBox
+    public WebElement globalDiscountsPageCheckBox;
+
+    //Under GLobal Discount dropdown
+    @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[9]")             //Under GLobal Discount Discount Product DropDowns
+    public WebElement underGLobalDIscountDropDown;
+
+    //Under Global Discount discount% box
+    @FindBy(xpath = "//input[@class='o_field_float o_field_number o_field_widget o_input']")
+    public WebElement underGLobalDiscountBox;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[22]")  //PriceList CheckBox
+    public WebElement priceListCheckBox;
+
+    //Under Pricelist Chechkbox there is dropDown
+    @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[10]")        //Available Pricelists
+    public WebElement underPricelistDropDown1;
+
+    //Under Pricelist CheckBox There is another dropdown
+    @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[11]")        //Default PricelIst
+    public WebElement underPricelistDropDown2;
+
+    //Under Pricelist checkbox there is errow button
+    @FindBy(xpath = "(//button[@class='fa fa-external-link btn btn-default o_external_button'])[7]")        //Under Pricelist errow button
+    public WebElement underPricelistErrowButton;
+
+    //Under Pricelist Check box there is a link
+    @FindBy (xpath = "//span[.='Pricelists']")                  //"Pricelists" link
+    public  WebElement underPricelistLink;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[23]")              //Loyalty Program checkBox
+    public WebElement loyaltyProgramCheckBox;
+
+    //When you click on loyalty program new tab window pops up:
+    @FindBy(xpath = "//span[.='Upgrade now']")                                  //Upgrade now button
+    public WebElement upgradeNowButton;
+
+    //When you click on loyalty program new tab window pops up:
+    @FindBy(xpath = "//span[.='Cancel']")                                        //Cancel button
+    public WebElement cancelButton;
+
+    //When you click you loyalty program new tab window will pop and this is X button
+    @FindBy(xpath = "//div[@id='modal_744']/div/div/div[1]/button")           //X button
+    public WebElement xButton;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[24]")                  //Price Control CheckBox
+    public WebElement priceControlCheckBox;
+    
+
+
+
+
+
     //---------------------------------------------------------------------------------------------------------------
 
     //PAYMENTS
