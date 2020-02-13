@@ -39,6 +39,9 @@ public class LoginPageTest {
     }
 
 
+
+
+
     public void navigateToPointOfSalePage(){ // how to be with intermediate page? for it create a class too?
         SeleniumUtils.pause(2);
         Driver.getDriver().findElement(By.xpath("//span[contains(text(), 'Point of Sale')][1]")).click();

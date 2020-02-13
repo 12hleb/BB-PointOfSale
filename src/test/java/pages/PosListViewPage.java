@@ -9,10 +9,8 @@ import utiles.Driver;
 import java.util.ArrayList;
 
 public class PosListViewPage {
-    public PosListViewPage()
-    {
-        PageFactory.initElements(Driver.getDriver(), this);
-
+    public PosListViewPage(){
+        PageFactory.initElements(Driver.getDriver(),this);
     }
 
     @FindBy(xpath = "//ol[@class='breadcrumb']")
