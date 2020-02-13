@@ -13,6 +13,9 @@ public class Pos_Cards_Views {
         PageFactory.initElements(Driver.getDriver(),this);
 
     }
+
+    @FindBy (xpath = "//ol[@class='breadcrumb']/li")
+    public WebElement headerOfThePage;
    @FindBy(xpath = "//input[@class='o_searchview_input']")
     public WebElement searchBox;
 
@@ -25,7 +28,7 @@ public WebElement leftArrowBox;
 @FindBy(xpath ="//button[@aria-label='Next']" )
     public WebElement rightArrowBox;
 
-@FindBy(xpath = "//button[@accesskey='l']" )// IS IT RIGHT ONE BY GLEB
+@FindBy(xpath = "//button[@accesskey='l']" )
     public WebElement listBox;
 
 
