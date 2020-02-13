@@ -2,22 +2,26 @@ package test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.AfterTest;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
+import pages.Pos_Cards_Views;
 import utiles.Config;
 import utiles.Driver;
 import utiles.SeleniumUtils;
 
-public class LoginPageTest {
+public class POS_Cards_View_Test {
 
-    public static void navigateToPOS(){
+    // creating POS CARDS view page
+    Pos_Cards_Views pos_cards_views = new Pos_Cards_Views();
+    LoginPageTest lp =new LoginPageTest();
 
-    }
+
+
+
     @Test
-    public void positiveLoginScenario(){
+    public void openPointOfSaleModule(){
 
         String userName = Config.getProperty("userNameInput");
         String password = Config.getProperty("passwordInput");
@@ -30,20 +34,21 @@ public class LoginPageTest {
         SeleniumUtils.highLighterMethod(Driver.getDriver(),lg.buttonLogIn); //highlight for make sure what chosen right element
 
         lg.buttonLogIn.click();
+        //SeleniumUtils.pause(3);
+//        WebElement linkToPoS = Driver.getDriver().findElement(By.xpath("//a[@data-menu-xmlid='point_of_sale.menu_point_root']"));
+//        linkToPoS.click();
+         lp.navigateToPointOfSalePage();
 
-        if(Config.getProperty("browser").equals("safari")) { // for case if you run in Safari, simple .click doesn't work, need to use JS.
-            JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
-            executor.executeScript("arguments[0].click();", lg.buttonLogIn);
-
-        }
     }
 
-
-    public void navigateToPointOfSalePage(){ // how to be with intermediate page? for it create a class too?
-        SeleniumUtils.pause(2);
-        Driver.getDriver().findElement(By.xpath("//span[contains(text(), 'Point of Sale')][1]")).click();
+    @Test
+    public void testingPOScardsview(){
+        Assert.assertTrue( pos_cards_views.headerOfThePage.getText().trim().equals("Point of Sale"));
     }
 
 
 
 }
+
+
+
