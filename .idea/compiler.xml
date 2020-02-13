@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="BB-PointOfSale" />
         <module name="pointOfSale" />
-        <module name="BB-PointOfSale" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />
