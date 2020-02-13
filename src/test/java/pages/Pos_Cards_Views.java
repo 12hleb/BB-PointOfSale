@@ -13,6 +13,9 @@ public class Pos_Cards_Views {
         PageFactory.initElements(Driver.getDriver(),this);
 
     }
+
+    @FindBy (xpath = "//ol[@class='breadcrumb']/li")
+    public WebElement headerOfThePage;
    @FindBy(xpath = "//input[@class='o_searchview_input']")
     public WebElement searchBox;
 
