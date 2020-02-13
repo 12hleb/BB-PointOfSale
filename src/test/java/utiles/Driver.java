@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class Driver {
 
     private static WebDriver driver;
@@ -31,7 +33,10 @@ public class Driver {
                     driver = new SafariDriver();
                     break;
             }
+
         }
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
         return driver;
    }
 
