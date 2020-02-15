@@ -29,6 +29,16 @@ public class SeleniumUtils {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    public static void waitForTitleLoaded(String expectedTitle, int seconds) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), seconds);
+        wait.until(ExpectedConditions.titleIs(expectedTitle));
+    }
+
+    public static void waitForClickability(WebElement element, int seconds) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), seconds);
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
 
     public static void scrollDown (WebDriver driver, int px){
 
