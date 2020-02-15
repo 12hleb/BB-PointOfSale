@@ -13,7 +13,7 @@ public class POS_Payments_Detail_Test {
     POS_Detail_Page pos_detail_page = new POS_Detail_Page();
     LoginPageTest loginPageTest = new LoginPageTest();
 
-    //private @FindBy (xpath = "")
+   //private @FindBy (xpath = "")
 
     @Test
     public void configurePyaments(){
