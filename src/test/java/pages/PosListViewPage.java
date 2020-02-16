@@ -27,6 +27,10 @@ public class PosListViewPage {
     @FindBy(xpath = "//input[@class='o_searchview_input']")
     public WebElement searchField;
 
+
+    @FindBy(xpath = "//td[@class='o_data_cell o_required_modifier']")
+    public WebElement firstPosInList;
+
     @FindBy(xpath = "//button[@class='fa fa-chevron-left btn btn-icon o_pager_previous']")
     public WebElement leftArrow;
 

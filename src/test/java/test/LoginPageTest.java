@@ -54,6 +54,7 @@ public class LoginPageTest {
         for(WebElement pos : lv.namesOfPOS){
            if(pos.getText().toLowerCase().contains(nameOfPos)){
                pos.click();
+               break;
            }
         }
     }

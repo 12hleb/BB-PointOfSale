@@ -14,14 +14,25 @@ public class POSCreatePage {
     @FindBy(xpath = "//button[@class='btn btn-primary btn-sm o_form_button_save']")
     public WebElement savePOSButton;
 
-    @FindBy(partialLinkText = "Discard")
+    @FindBy(xpath = "//button[@accesskey='j']")
     public WebElement discardButton;
 
     @FindBy(xpath="//div[@class='o_control_panel o_breadcrumb_full']/ol/li[2]" )
     public WebElement newTextUnderCreatePOS;
 
-    @FindBy(css = "input#o_field_input_20")
+    @FindBy(xpath = "//input[@class='o_field_char o_field_widget o_input o_required_modifier']")
     public WebElement nameInputBoxOfPOS;
+
+    @FindBy(xpath = "//div[@class='o_notification undefined o_error']")    // when you did not field out all required box and click save
+    public WebElement errorMessage;
+
+
+    @FindBy (xpath = "//button[@class='btn btn-sm btn-primary']")
+    public WebElement warningMessageSubmit;
+
+
+
+    //----------------------------------------PRICING CATEGORY LOCATORS-------------------------------------
 
     @FindBy(xpath = "//div[@class='o_form_sheet']/h2[4]")
     public WebElement pricingCategoryText;                      // name of category. verification if Pricing category
