@@ -188,6 +188,8 @@ public class POS_Detail_Page {
     //--------------------------------------------------------------------------------------------------------------
 
     //PRICING
+    @FindBy(xpath = "(//td[@class='o_data_cell o_required_modifier'])[2]")
+    public WebElement phone;
 
     @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/div/div/h2[4]")        //Pricing Title
     public WebElement pricingTitle;
@@ -203,13 +205,20 @@ public class POS_Detail_Page {
     @FindBy(xpath = "(//input[@class='o_radio_input'])[2]")         //Tax included prices checkBox
     public WebElement taxIncludedPricesCheckBox;
 
+    @FindBy(xpath = "//a[@class='oe-link']")
+
+    public WebElement menageTaxIncludedPricesCheckBox;
+
 
     @FindBy(xpath = "(//input[@type='checkbox'])[21]")              //Global Discounts checkBox
     public WebElement globalDiscountsPageCheckBox;
 
     //Under GLobal Discount dropdown
     @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[9]")             //Under GLobal Discount Discount Product DropDowns
-    public WebElement underGLobalDIscountDropDown;
+     static public WebElement underGLobalDIscountDropDown;
+
+    @FindBy(xpath = "(//button[@class='fa fa-external-link btn btn-default o_external_button'])[3]")
+    public WebElement arrowUnderGlobalDiscount;
 
     //Under Global Discount discount% box
     @FindBy(xpath = "//input[@class='o_field_float o_field_number o_field_widget o_input']")
