@@ -364,6 +364,12 @@ public class POS_Detail_Page {
 
 
 
+    //--------------------------------------------------------------------------
+    //SAVE accesskey="s"
+    @FindBy (xpath = "//button[@accesskey='s']")
+    public WebElement saveButton;
+
+
 
 
 
