@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import pages.LoginPage;
+import pages.POS_Detail_Page;
 import pages.PosListViewPage;
 import pages.Pos_Cards_Views;
 import utiles.Config;
@@ -57,6 +58,8 @@ public class LoginPageTest {
                break;
            }
         }
+        POS_Detail_Page pd = new POS_Detail_Page();
+        pd.editButton.click();
     }
 
     public void navigateToImport(){
