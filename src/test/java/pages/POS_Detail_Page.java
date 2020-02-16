@@ -11,6 +11,10 @@ public class POS_Detail_Page {
 
         PageFactory.initElements(Driver.getDriver(), this);
     }
+    @FindBy(xpath = "//button[@accesskey='s']")
+    public WebElement saveButton;
+    @FindBy(xpath = "(//table//tbody//td[@class='o_data_cell o_required_modifier'])[1]")
+    public WebElement asdButton;
 
     @FindBy(xpath = "//button[@accesskey='a']")
     public WebElement editButton;
@@ -154,6 +158,8 @@ public class POS_Detail_Page {
     //-------------------------------------------------------------------------------------------------------------
 
     //TAXES:
+    @FindBy(xpath = "//span[.='NORTH AMERICA']")
+    public WebElement dropDowTxt;
 
     @FindBy (xpath = "//h2[.='Taxes']")                 //Taxes title
     public WebElement taxesTitle;
