@@ -2,13 +2,9 @@ package test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.Test;
 import pages.LoginPage;
-import pages.POS_Detail_Page;
-import pages.PosListViewPage;
+import pages.POS_List_View_Page;
 import pages.Pos_Cards_Views;
 import utiles.Config;
 import utiles.Driver;
@@ -16,7 +12,7 @@ import utiles.SeleniumUtils;
 
 public class LoginPageTest {
 
-    PosListViewPage lv = new PosListViewPage();
+    POS_List_View_Page lv = new POS_List_View_Page();
 
     public void positiveLoginScenario(){
 
@@ -38,7 +34,7 @@ public class LoginPageTest {
     }
 
     public void navigateToPointOfSalePage(){
-        Driver.getDriver().findElement(By.xpath("//span[contains(text(), 'Point of Sale')][1]")).click();
+        Driver.getDriver().findElement(By.xpath("(//span[contains(text(), 'Point of Sale')])[1]")).click(); // Dzhulietta added () to xpath
     }
 
     public void navigateToListViewPos(){
@@ -55,11 +51,8 @@ public class LoginPageTest {
         for(WebElement pos : lv.namesOfPOS){
            if(pos.getText().toLowerCase().contains(nameOfPos)){
                pos.click();
-               break;
            }
         }
-        POS_Detail_Page pd = new POS_Detail_Page();
-        pd.editButton.click();
     }
 
     public void navigateToImport(){
