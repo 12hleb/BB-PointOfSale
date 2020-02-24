@@ -11,6 +11,8 @@ import pages.POS_Detail_Page;
 import utiles.Driver;
 import utiles.SeleniumUtils;
 
+import java.util.Set;
+
 public class BillsAndReceipts {
 
     POS_Detail_Page dp = new POS_Detail_Page();

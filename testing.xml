@@ -1,0 +1,26 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name = "Suite1">
+    <listeners>
+        <listener class-name= "org.uncommons.reportng.HTMLReporter" />
+        <listener class-name= "org.uncommons.reportng.JUnitXMLReporter" />
+    </listeners>
+
+    <test name = "test1">
+
+        <!--        <groups>-->
+        <!--            <run>-->
+        <!--                <include name = "functest" />-->
+        <!--            </run>-->
+        <!--        </groups>-->
+        <classes>
+            <class name = "test.POS_Bar_Restaurant" />
+            <class name = "test.POS_Valid_Order_Interface"/>
+            <class name = "test.POS_Cards_View_Test"/>
+            <class name = "test.CreatePOS_Test"/>
+            <class name = "test.POS_Detail_Page_Test"/>
+            <class name = "test.POS_Payments_Detail_Test"/>
+        </classes>
+    </test>
+</suite>
