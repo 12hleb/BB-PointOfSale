@@ -16,8 +16,7 @@ public class POS_Detail_Page {
     @FindBy(xpath = "(//table//tbody//td[@class='o_data_cell o_required_modifier'])[1]")
     public WebElement asdButton;
 
-    @FindBy (xpath = "//button[@accesskey='s']") //add by Gleb
-    public WebElement saveButton;
+
 
     @FindBy(xpath = "//button[@accesskey='a']")
     public WebElement editButton;
@@ -384,8 +383,7 @@ public class POS_Detail_Page {
 
     //--------------------------------------------------------------------------
     //SAVE accesskey="s"
-    @FindBy (xpath = "//button[@accesskey='s']")
-    public WebElement saveButton;
+
 
 
 
